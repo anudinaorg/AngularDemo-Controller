@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="productApp">
+<head>
+<script type="text/javascript" src="angular.min.js"></script>
+<script src="product.js"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body >
+Sharing the Data between multiple controller by factory
+<h1> Apple Products</h1>
+<div ng-controller="appleCtrl">
+   <ul ng-repeat = "product in appleProducts|filter:'apple'">
+   	  <li>{{product.name}}---{{product.brand}}---{{product.price}}</li>
+   </ul>
+</div>
+
+<h1> Samsung Products</h1>
+<div ng-controller="samsungCtrl">
+   <ul ng-repeat = "product in samsungProducts|filter:'samsung'">
+   	  <li>{{product.name}}---{{product.brand}}---{{product.price}}</li>
+   </ul>
+</div>
+</body>
+</html>
